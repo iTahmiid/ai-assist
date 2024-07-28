@@ -1,0 +1,7 @@
+.title:hover .underline {
+    transform: translateX(-210px);
+}
+
+.titlez:hover .underlinez {
+    transform: translateX(0);
+}
