@@ -1,4 +1,4 @@
-import { Raleway, Roboto } from 'next/font/google'
+import { Raleway } from 'next/font/google'
 import "./globals.css";
 import { RiTwitterXLine } from "react-icons/ri";
 import { IoMdMail } from "react-icons/io";
@@ -9,7 +9,7 @@ import { FaTwitter } from "react-icons/fa";
 import Link from "next/link";
 
 const raleway = Raleway({
-  weight: '400',
+  weight: '300',
   subsets: ['latin'],
 })
 
