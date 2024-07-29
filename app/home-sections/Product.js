@@ -47,7 +47,7 @@ export default function Product() {
             <div className="my-20">
 
 
-                <div className="flex-none text-center lg:text-left lg:flex mb-28 justify-between items-center">
+                <div className="flex-none text-left lg:flex mb-16 justify-between items-center">
                     <h1 className="text-xl mb-5 lg:mb-0 lg:text-4xl text-[#121643] font-bold">Revolutionize your workflow <br /> with our products</h1>
                     <p>Libero tincidunt magna, leo tempus aenean. Adipiscing <br /> vestibulum vehicula vel donec pulvinar aliquam, blandit lorem.</p>
                 </div>
@@ -71,7 +71,7 @@ export default function Product() {
 
 
                         </div>
-                        <div className="lg:w-1/2">
+                        <div className="lg:w-1/2 mt-28 lg:mt-0">
                             <Image src={productImg} className="w-full"></Image>
 
                         </div>

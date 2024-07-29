@@ -66,7 +66,7 @@ function Pricing() {
     return (
         <main className="p-5">
             <div className="text-center mb-8">
-                <h1 className="text-4xl font-bold text-[#121643]">Flexible Pricing Plans <br /> for Every Need</h1>
+                <h1 className="text-2xl lg:text-4xl font-bold text-[#121643]">Flexible Pricing Plans <br /> for Every Need</h1>
                 <p className="mt-3">Choose the plan that fits your business requirements.</p>
             </div>
             <div className="grid grid-cols-1 mt-10 md:grid-cols-2 lg:grid-cols-3 gap-8">

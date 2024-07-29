@@ -49,7 +49,7 @@ export default function Product() {
                     </div>
                     <div>
                         <div className="ml-4">
-                            <h1 className="text-4xl title overflow-hidden font-bold my-14 relative">
+                            <h1 className="text-2xl lg:text-4xl overflow-hidden font-bold my-14 relative">
                                 Services
                                 {/* <span className="bg-[#28a745] underline transition-all w-52 h-2  block"></span> */}
                             </h1>

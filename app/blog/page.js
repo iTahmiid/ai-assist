@@ -31,7 +31,7 @@ function blog() {
 
 
             <section className='mt-24'>
-                <h1 className='text-center text-3xl mb-[15px] font-bold'>Recent Posts</h1>
+                <h1 className='text-center text-2xl lg:text-3xl mb-[15px] font-bold'>Recent Posts</h1>
                 <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
                     {blogData.map((blog, index) => (
                         <div className="card border-opacity-20 border-gray-300 bg-base-100 border rounded-none w-full" key={index}>
@@ -48,7 +48,7 @@ function blog() {
 
 
             <section className="lg:flex mt-44 text-center lg:text-left items-center justify-between bg-[#121643] py-12 px-20">
-                <h1 className="text-white text-4xl font-bold">Start Youre Free Trial Now              </h1>
+                <h1 className="text-white text-2xl lg:text-4xl font-bold">Start Youre Free Trial Now              </h1>
                 <button className="btn rounded-none mt-5 w-full lg:w-auto lg:mt-0">Get Started Today</button>
             </section>
         </main>
