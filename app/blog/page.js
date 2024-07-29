@@ -1,6 +1,8 @@
 import Image from 'next/image';
 import React from 'react';
 import aboutImg from "../../public/images/startup.svg"
+import Bottom from "../../components/bottom.jsx"
+import Pagetit from '@/components/pagetit';
 function blog() {
     const blogData = [
         {
@@ -18,16 +20,10 @@ function blog() {
     ]
     return (
         <main className='max-w-7xl mx-auto'>
-            <section className=''>
-                <div className=' text-center'>
-                    <h1 className="text-2xl lg:text-4xl  mt-7 leading-snug font-bold"> AI-Assist Blog
-                    </h1>
-                    <p className="text-sm lg:text-lg mt-3 ">Stay updated with the latest news, tips, <br /> and insights on AI and customer support.
 
-                    </p>
+            <Pagetit
+                title="AI-Assist Blog" desc="Stay updated with the latest news, tips, and insights on AI and customer support."></Pagetit>
 
-                </div>
-            </section>
 
 
             <section className='mt-24'>
@@ -46,11 +42,7 @@ function blog() {
                 </div>
             </section>
 
-
-            <section className="lg:flex mt-44 text-center lg:text-left items-center justify-between bg-[#121643] py-12 px-20">
-                <h1 className="text-white text-2xl lg:text-4xl font-bold">Start Youre Free Trial Now              </h1>
-                <button className="btn rounded-none mt-5 w-full lg:w-auto lg:mt-0">Get Started Today</button>
-            </section>
+            <Bottom text="Start Your Free Trial Now" button="Get Started"></Bottom>
         </main>
     );
 }

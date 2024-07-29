@@ -2,6 +2,8 @@ import Image from 'next/image';
 import React from 'react';
 import aboutImg from "../../public/images/startup.svg"
 import missonImg from "../../public/images/stats.svg"
+import Bottom from "../../components/bottom.jsx"
+import Pagetit from "../../components/pagetit.jsx"
 function About() {
 
     const teamData = [
@@ -26,13 +28,11 @@ function About() {
     return (
         <main className='max-w-7xl mx-auto'>
 
-            <div className="text-center mb-8">
-                <h1 className="text-2xl lg:text-4xl font-bold text-[#121643]">About AI-Assist</h1>
-                <p className="mt-3">Learn more about our mission and the team behind AI-Assist.</p>
-            </div>
+            <Pagetit title="About AI-Assist" desc="Learn more about our mission and the team behind AI-Assist."></Pagetit>
+
             <section className='mt-12  mx-auto'>
 
-                <div className='flex-none lg:flex mt-36  text-center lg:text-left'>
+                <div className='flex-none lg:flex mt-0 lg:mt-36  text-center lg:text-left'>
                     <div className=' w-full lg:w-1/2'>
                         <h1 className='text-2xl lg:text-4xl font-bold mb-4 '>Our Mission</h1>
                         <p>At AI-Assist, our mission is to revolutionize customer interactions through advanced AI technology. We strive to create solutions that enhance customer satisfaction, improve efficiency, and drive business growth.</p>
@@ -69,11 +69,7 @@ function About() {
                 </div>
             </section>
 
-            <section className="lg:flex mt-44 text-center lg:text-left items-center justify-between bg-[#121643] py-12 px-20">
-                <h1 className="text-white text-2xl lg:text-4xl font-bold">Join Us on Our Journey
-                </h1>
-                <button className="btn rounded-none mt-5 w-full lg:w-auto lg:mt-0">Get Started Today</button>
-            </section>
+            <Bottom text="Join Us on Our Journey" button="Get Started Today"></Bottom>
         </main>
     );
 }

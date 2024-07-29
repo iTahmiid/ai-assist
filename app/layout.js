@@ -35,7 +35,9 @@ export default function RootLayout({ children }) {
 
   return (
     <html lang="en" >
-      <body className={raleway.className}>
+      <body className={raleway.className} style={{
+        overflowX: "hidden"
+      }}>
 
 
         <div className="navbar container mx-auto pt-3 py-6">

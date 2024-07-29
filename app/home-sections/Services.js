@@ -43,11 +43,9 @@ export default function Product() {
 
 
             <div className="my-20">
-                <div className="grid items-center grid-cols-1 md:grid-cols-2 gap-2">
-                    <div>
-                        <Image className="w-full mt-28" src={serviceImg} alt="Feature image"></Image>
-                    </div>
-                    <div>
+                <div className=" flex-row lg:flex lg:flex-row-reverse items-center gap-10">
+
+                    <div className="w-1/2">
                         <div className="ml-4">
                             <h1 className="text-2xl lg:text-4xl overflow-hidden font-bold my-14 relative">
                                 Services
@@ -65,8 +63,12 @@ export default function Product() {
                                 </div>
                             ))}
                         </div>
+
                     </div>
 
+                    <div>
+                        <Image className="w-full mt-28" src={serviceImg} alt="Feature image"></Image>
+                    </div>
                 </div>
 
 
