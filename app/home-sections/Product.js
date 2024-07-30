@@ -47,9 +47,9 @@ export default function Product() {
 
 
 
-            <div className="flex-none text-left lg:flex mb-16 justify-between items-center">
+            <div className=" mb-10">
                 <Title title={<span>Product</span>}></Title>
-                <p>Libero tincidunt magna, leo tempus aenean. Adipiscing <br /> vestibulum vehicula vel donec pulvinar aliquam, blandit lorem.</p>
+
             </div>
             <div>
 

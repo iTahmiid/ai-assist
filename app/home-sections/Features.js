@@ -62,7 +62,6 @@ export default function Features() {
                                             <span className="bg-[#121643] inline-block text-white p-5 rounded">{feature.icon}</span>
                                         </h1>
                                     </div>
-                                    {/* */}
                                     <h2 className="text-xl lg:text-2xl font-bold mt-2 text-[#121643]] ">{feature.title}</h2>
                                     <p className="mt-3 text-[#121643bf]">{feature.description}</p>
                                     <a href="#" className="font-bold text-sm text-[#121643]">Learn More &#8594;</a>

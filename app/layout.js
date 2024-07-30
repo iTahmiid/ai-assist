@@ -23,12 +23,13 @@ export default function RootLayout({ children }) {
 
   const navOptions = <>
 
-    <li className="text-md font-bold m-4 hover:text-[#28A745] transition-all cursor-pointer"><Link href="/">Home</Link></li>
-    <li className="text-md font-bold m-4 hover:text-[#28A745] transition-all cursor-pointer"><Link href="/about">About</Link></li>
-    <li className="text-md font-bold m-4 hover:text-[#28A745] transition-all cursor-pointer"><Link href="/pricing">Pricing</Link></li>
-    <li className="text-md font-bold m-4 hover:text-[#28A745] transition-all cursor-pointer"><Link href="/blog">Blog</Link></li>
-    <li className="text-md font-bold m-4 hover:text-[#28A745] transition-all cursor-pointer">Try Demo</li>
-    <li className="text-md font-bold m-4 hover:text-[#28A745] transition-all cursor-pointer">Contact</li>
+    <li className="text-md font-bold m-4 hover:text-[#121643] transition-all cursor-pointer hover:bg-transparent"><Link href="/">Home</Link></li>
+    <li className="text-md font-bold m-4 hover:text-[#121643] transition-all cursor-pointer hover:bg-transparent"><Link href="/about">About</Link></li>
+    <li className="text-md font-bold m-4 hover:text-[#121643] transition-all cursor-pointer hover:bg-transparent"><Link href="/pricing">Pricing</Link></li>
+    <li className="text-md font-bold m-4 hover:text-[#121643] transition-all cursor-pointer hover:bg-transparent"><Link href="/blog">Blog</Link></li>
+    <li className="text-md font-bold m-4 hover:text-[#121643] transition-all cursor-pointer hover:bg-transparent"><Link href="/tryDemo">Try Demo</Link></li>
+    <li className="text-md font-bold m-4 hover:text-[#121643] transition-all cursor-pointer hover:bg-transparent"> <Link href="/">Contact</Link></li>
+
 
 
   </>
@@ -79,34 +80,28 @@ export default function RootLayout({ children }) {
 
 
 
-        <main className="mx-auto container max-w-6xl">
+        <main className="mx-auto container lg:max-w-6xl">
           {children}
         </main>
 
 
-        <footer className="footer px-10 lg:px-48 mt-40 bg-[#121643] text-neutral-content p-10">
+        <footer className="footer px-10 lg:px-48 flex-none lg:flex items-end justify-between mt-40 bg-[#121643] text-neutral-content p-10">
           <aside>
 
             <p className='text-xl flex gap-3 items-center'>
               <IoMdMail />  info@ai-assist.com
             </p>
-            <p>
+            <nav className='mt-4'>
+              <h6 className="footer-title">Social</h6>
+              <div className="grid grid-flow-col gap-4">
+                <a className='text-2xl' href=""><FaFacebook /></a>
+                <a className='text-2xl' href=""><RiTwitterXLine /></a>
+                <a className='text-2xl' href=""><FaLinkedin></FaLinkedin></a>
+              </div>
+            </nav>
+          </aside>
 
-            </p>
-          </aside>
-          <nav>
-            <h6 className="footer-title">Social</h6>
-            <div className="grid grid-flow-col gap-4">
-              <a className='text-2xl' href=""><FaFacebook /></a>
-              <a className='text-2xl' href=""><RiTwitterXLine /></a>
-              <a className='text-2xl' href=""><FaLinkedin></FaLinkedin></a>
-            </div>
-          </nav>
-        </footer>
-        <footer className="footer footer-center border-top  bg-[#0c0f2c] text-base-content p-4">
-          <aside className='border-white border-top'>
-            <p className='text-white'>© {new Date().getFullYear()}  AI-Assist. All rights reserved. | Privacy Policy | Terms of Service</p>
-          </aside>
+          <p className='text-white'>© {new Date().getFullYear()}  AI-Assist. All rights reserved. | Privacy Policy | Terms of Service</p>
         </footer>
 
       </body>

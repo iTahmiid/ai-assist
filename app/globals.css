@@ -6,4 +6,77 @@ body {
     overflow-x: hidden;
     max-width: 100%;
     width: 100%;
+
+}
+
+.custom-underline {
+    position: relative;
+    display: inline-block;
+}
+
+.custom-underline::after {
+    content: '';
+    position: absolute;
+    width: 100%;
+    height: 5px;
+    background-color: currentColor;
+    bottom: -1px;
+    left: 0;
+    transition: width 0.3s ease;
+    border-radius: 30px;
+}
+
+.title:hover .custom-underline::after {
+    width: 0;
+}
+
+/* chat box  */
+
+/* Chatbox Styles */
+.chatbox {
+    border-radius: 0;
+    overflow: hidden;
+    border: 1px solid #e0e0e0;
+}
+
+.chatbox-header {
+    background: #121643;
+    color: white;
+    padding: 20px;
+    text-align: center;
+}
+
+.chatbox-body {
+    padding: 10px;
+    height: 400px;
+    overflow-y: auto;
+}
+
+.message {
+    margin-bottom: 10px;
+
+}
+
+.bot-message {
+    background: #121643;
+    color: white;
+    text-align: left;
+
+}
+
+.user-message {
+    background: #e0e0e0;
+    color: black;
+    text-align: right;
+}
+
+.chatbox-footer {
+    display: flex;
+    border-top: 1px solid #ddd;
+}
+
+#user-input {
+    flex: 1;
+
+    border: none;
 }

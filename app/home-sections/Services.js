@@ -1,6 +1,7 @@
 import "./underline.css"
 import serviceImg from "../../public/images/service.svg"
 import Image from "next/image";
+import Title from "@/components/Title";
 
 export default function Product() {
     const productsData = [
@@ -46,11 +47,8 @@ export default function Product() {
                 <div className=" flex-row lg:flex lg:flex-row-reverse items-center gap-10">
 
                     <div className="w-1/2">
-                        <div className="ml-4">
-                            <h1 className="text-2xl lg:text-4xl overflow-hidden font-bold my-14 relative">
-                                Services
-                                {/* <span className="bg-[#28a745] underline transition-all w-52 h-2  block"></span> */}
-                            </h1>
+                        <div className="ml-4 my-12">
+                            <Title title={<span>Services</span>}></Title>
                         </div>
 
                         <div className="grid gap-3 border-none grid-cols-1 ">

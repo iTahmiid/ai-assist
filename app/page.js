@@ -11,10 +11,13 @@ export default function Home() {
     <main >
       <header className="flex items-center text-center flex-col justify-center mt-11">
         <div>
-          <h1 className=" text-xl leading-snug lg:leading-normal lg:text-5xl font-bold" style={{
-
-          }}>Revolutionize Your Customer <br /> Interactions With AI-Assist
+          <h1 className="text-3xl title mb-4 leading-snug lg:leading-normal lg:text-5xl font-bold">
+            Revolutionize Your Customer <br /> Interactions With <span className="custom-underline">AI-Assist</span>
           </h1>
+
+
+
+
           <p className="mt-2 text-sm lg:text-xl text-[#121643bf]">Experience the future of customer support with AI-powered solutions.
 
           </p>
@@ -42,7 +45,7 @@ export default function Home() {
         <Bottom text="Start Your Free Trial Now" button="Get Your Free Trial Now"></Bottom>
       </div>
 
-    </main>
+    </main >
 
   );
 }
