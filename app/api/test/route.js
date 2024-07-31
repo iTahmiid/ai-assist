@@ -1,4 +1,6 @@
 import { NextResponse } from 'next/server';
-export async function GET(req, res) {
-    return res.json({ greetings: 'Hello World' })
+export function GET(
+    req,
+) {
+    return Response.json({ message: 'Hello from Next.js!' })
 }
