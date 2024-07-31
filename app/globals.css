@@ -58,14 +58,15 @@ body {
 }
 
 .bot-message {
-    background: #121643;
-    color: white;
+    padding: 20px;
     text-align: left;
+    padding: 20px;
 
 }
 
 .user-message {
-    background: #e0e0e0;
+    background: #1216430c;
+    padding: 20px ;
     color: black;
     text-align: right;
 }
@@ -79,4 +80,26 @@ body {
     flex: 1;
 
     border: none;
+}
+
+
+
+.loader hr {
+    border-radius: 4px;
+    border: none;
+    background: linear-gradient(to right, #9ed7ff, #ffffff, #9ed7ff);
+    background-size: 800px 50px;
+    height: 20px;
+    animation: loader 3s infinite linear;
+    margin-bottom: 10px;
+}
+
+@keyframes loader {
+    0% {
+        background-position: -800px 0px;
+    }
+
+    100% {
+        background-position: 800px 0;
+    }
 }
