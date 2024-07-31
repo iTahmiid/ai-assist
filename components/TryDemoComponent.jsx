@@ -39,7 +39,7 @@ const TryDemoComponent = () => {
                     'Content-Type': 'application/json'
                 }
             };
-            const response = await fetch('http://localhost:3000/api/gemini', options);
+            const response = await fetch('https://ai-assist-a.vercel.app:3000/api/gemini', options);
             const data = await response.text();
             setChatHistory(oldChatHistory => oldChatHistory.map((chatItem, index) => {
                 if (chatItem.parts[0] === "loading" && chatItem.role === "model") {
@@ -118,7 +118,11 @@ const TryDemoComponent = () => {
                                     value={value}
                                     onChange={(e) => setValue(e.target.value)}
                                 />
-                                <button onClick={getResponse} className="btn text-2xl rounded-none border-none m-0 bg-white hover:bg-transparent">
+                                <button
+                                    onClick={getResponse}
+                                    onTouchStart={getResponse}
+                                    className="btn text-2xl rounded-none border-none m-0 bg-white hover:bg-transparent"
+                                >
                                     <IoMdSend />
                                 </button>
                             </div>
