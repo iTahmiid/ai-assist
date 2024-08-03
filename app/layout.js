@@ -2,6 +2,7 @@ import { Raleway } from 'next/font/google'
 import "./globals.css";
 import { RiTwitterXLine } from "react-icons/ri";
 import { IoMdMail } from "react-icons/io";
+import "./globals.css";
 
 
 import { FaFacebook, FaLinkedin, FaMailBulk } from "react-icons/fa";
@@ -35,10 +36,8 @@ export default function RootLayout({ children }) {
   </>
 
   return (
-    <html lang="en" >
-      <body className={raleway.className} style={{
-        overflowX: "hidden"
-      }}>
+    <html lang="en">
+      <body className={raleway.className}>
 
 
         <div className="navbar container mx-auto pt-3 py-6">
