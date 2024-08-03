@@ -41,7 +41,7 @@ const Demo = () => {
                     'Content-Type': 'application/json'
                 }
             };
-            const response = await fetch('http://localhost:3000/api/gemini', options);
+            const response = await fetch('https://ai-assist-a.vercel.app/api/gemini', options);
             const data = await response.text();
             setChatHistory(oldChatHistory => oldChatHistory.map((chatItem, index) => {
                 if (chatItem.parts[0] === "loading" && chatItem.role === "model") {
