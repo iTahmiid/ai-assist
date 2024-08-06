@@ -2,6 +2,7 @@
 
 import React, { useEffect, useState, useRef } from 'react';
 import { FaRobot } from "react-icons/fa6";
+import ReactMarkdown from 'react-markdown';
 import { IoMdSend } from "react-icons/io";
 import '../app/globals.css';
 
@@ -41,7 +42,7 @@ const Demo = () => {
                     'Content-Type': 'application/json'
                 }
             };
-            const response = await fetch('https://ai-assist-a.vercel.app/api/gemini', options);
+            const response = await fetch('http://localhost:3000/api/gemini', options);
             const data = await response.text();
             setChatHistory(oldChatHistory => oldChatHistory.map((chatItem, index) => {
                 if (chatItem.parts[0] === "loading" && chatItem.role === "model") {
@@ -103,9 +104,7 @@ const Demo = () => {
                                 <hr />
                             </div>
                         ) : (
-                            <div className=''>
-                                {chatItem.parts.join('')}
-                            </div>
+                         <ReactMarkdown>{chatItem.parts.join('')}</ReactMarkdown>
                         )}
                     </div>
                 ))}

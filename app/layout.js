@@ -10,7 +10,6 @@ import { FaTwitter } from "react-icons/fa";
 import Link from "next/link";
 
 const raleway = Raleway({
-  weight: '300',
   subsets: ['latin'],
 })
 

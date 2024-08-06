@@ -10,8 +10,7 @@ body {
 }
 
 html {
-    scrollbar-width: thin;
-    scrollbar-color: white white;
+    scrollbar-width: thin; 
 }
 
 .custom-underline {
