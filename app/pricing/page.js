@@ -65,7 +65,7 @@ function Pricing() {
     ];
 
     return (
-        <main className="">
+        <main className="max-w-7xl mx-auto">
             <Pagetit
                 title={<span>Flexible Pricing Plans <br /> for Every Need</span>} desc="Learn more about our mission and the team behind AI-Assist."></Pagetit>
             <div className="grid grid-cols-1 mt-10 md:grid-cols-2 lg:grid-cols-3 gap-8">

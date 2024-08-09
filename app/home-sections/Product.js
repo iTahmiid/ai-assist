@@ -54,17 +54,14 @@ export default function Product() {
             <div>
 
                 <div className="flex-none lg:flex">
-                    <div className="grid lg:w-1/2 grid-cols-1  md:grid-cols-2">
+                    <div className="grid lg:w-1/2 grid-cols-1 gap-2  md:grid-cols-2">
 
                         {productsData.map((product, index) => (
-                            <div className="card hover:bg-[#121643] transition-all hover:text-white bg-base-100 w-full border rounded-none" key={index}>
-                                <figure>
+                            <div className="card hover:bg-[#797DFC] transition-all hover:text-white bg-base-100 w-full border rounded-none" key={index}>
 
-                                </figure>
                                 <div className="card-body">
                                     <h2 className="text-xl font-bold mb-4 ">{product.title}</h2>
                                     <p className="text- ">{product.description}</p>
-
                                 </div>
                             </div>
                         ))}
@@ -72,7 +69,7 @@ export default function Product() {
 
                     </div>
                     <div className="lg:w-1/2 mt-28 lg:mt-0">
-                        <Image src={productImg} className="w-full"></Image>
+                        <Image src={productImg} alt="" className="w-full"></Image>
 
                     </div>
                 </div>
@@ -86,5 +83,3 @@ export default function Product() {
         </section >
     )
 }
-
-

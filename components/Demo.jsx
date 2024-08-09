@@ -42,7 +42,7 @@ const Demo = () => {
                     'Content-Type': 'application/json'
                 }
             };
-            const response = await fetch('https://ai-assist-a.vercel.app/api/gemini', options);
+            const response = await fetch('http://localhost:3000/api/gemini', options);
             const data = await response.text();
             setChatHistory(oldChatHistory => oldChatHistory.map((chatItem, index) => {
                 if (chatItem.parts[0] === "loading" && chatItem.role === "model") {
@@ -54,17 +54,20 @@ const Demo = () => {
                 return chatItem;
             }));
             setValue("");
-            console.log(data)
         } catch (error) {
             console.error(error);
             setError("Something went wrong");
         }
         setLoading(false);
+
+        // Scroll to bottom after updating chat history
+        bottomRef.current?.scrollIntoView({ behavior: 'smooth' });
     }
 
     useEffect(() => {
         const handleKeyPress = (event) => {
             if (event.key === 'Enter') {
+                event.preventDefault(); // Prevent form submission if within a form
                 getResponse();
             }
         };
@@ -77,6 +80,7 @@ const Demo = () => {
     }, [value, chatHistory]);
 
     useEffect(() => {
+        // Ensure scrolling to the bottom when chatHistory updates
         bottomRef.current?.scrollIntoView({ behavior: 'smooth' });
     }, [chatHistory]);
 
@@ -90,13 +94,13 @@ const Demo = () => {
                             <FaRobot className='text-xl' />
                         </div>
                     </div>
-                    <h4 className='text-sm font-bold'>Online</h4>
+                    <h4 className='text-sm '>Online</h4>
                 </div>
             </div>
             <div className="chatbox-body custom-scroll" id="chatbox-body">
-                <p className='bot-message mb-3 mt-7 text-black p-4 font-bold'>Hello! How can I help you?</p>
+                <p className='bot-message mb-3 mt-7 text-black p-4'>Hello! How can I help you?</p>
                 {chatHistory.map((chatItem, index) => (
-                    <div key={index} className={`message ${chatItem.role === 'user' ? 'user-message' : 'bot-message'} font-bold text-black`}>
+                    <div key={index} className={`message ${chatItem.role === 'user' ? 'user-message' : 'bot-message'} text-black`}>
                         {chatItem.parts[0] === "loading" ? (
                             <div className="loader">
                                 <hr />
@@ -108,7 +112,7 @@ const Demo = () => {
                         )}
                     </div>
                 ))}
-
+                <div ref={bottomRef} />
             </div>
             <div className="chatbox-footer">
                 <input
