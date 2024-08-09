@@ -4,75 +4,77 @@ import Image from "next/image";
 import Title from "@/components/Title";
 
 export default function Product() {
-    const productsData = [
-        {
-            "title": "Customization",
-            "description": "Train LLMs with your specific data to personalize responses and understand brand voice."
-        },
-        {
-            "title": "Integrations",
-            "description": "Integrate AI-Assist with existing CRM and support platforms for seamless data flow."
-        },
-        {
-            "title": "Analytics & Reporting",
-            "description": "Provide insights into customer interactions and chatbot performance to optimize support strategies."
-        }
-    ]
+     const productsData = [
+          {
+               "title": "Customization",
+               "description": "Train LLMs with your specific data to personalize responses and understand brand voice."
+          },
+          {
+               "title": "Integrations",
+               "description": "Integrate AI-Assist with existing CRM and support platforms for seamless data flow."
+          },
+          {
+               "title": "Analytics & Reporting",
+               "description": "Provide insights into customer interactions and chatbot performance to optimize support strategies."
+          }
+     ]
 
-    const headingStyle = {
-        position: 'relative',
-    };
+     const headingStyle = {
+          position: 'relative',
+     };
 
-    const beforeStyle = {
-        content: '""',
-        position: 'absolute',
-        bottom: '-8px',
-        left: '50px', /* Center the line horizontally */
-        transform: 'translateX(-50%)',
-        width: '80px', /* Adjust the width of the line */
-        height: '2px', /* Adjust the height/thickness of the line */
-        borderRadius: "20px",
-        backgroundColor: '#28A745',
-    };
-
-
-
-    return (
-
-        <section className="">
+     const beforeStyle = {
+          content: '""',
+          position: 'absolute',
+          bottom: '-8px',
+          left: '50px', /* Center the line horizontally */
+          transform: 'translateX(-50%)',
+          width: '80px', /* Adjust the width of the line */
+          height: '2px', /* Adjust the height/thickness of the line */
+          borderRadius: "20px",
+          backgroundColor: '#28A745',
+     };
 
 
 
-            <div className="my-20">
-                <div className=" flex-row lg:flex lg:flex-row-reverse items-center gap-10">
+     return (
+          <section className="mt-40">
 
-                    <div className="w-1/2">
-                        <div className="ml-4 my-12">
-                            <Title title={<span>Services</span>}></Title>
-                        </div>
+               <div className="flex-none items-center lg:flex lg:flex-row-reverse gap-8">
 
-                        <div className="grid gap-3 border-none grid-cols-1 ">
-                            {productsData.map((product, index) => (
-                                <div key={index} className="card rounded-none p-3 card-compact bg-base-100 w-96">
-                                    <div className="card-body">
-                                        <h2 className="text-xl text-[#121643] font-bold">{product.title}</h2>
-                                        <p className="text-[#121643bf]">{product.description}</p>
-                                    </div>
-                                </div>
-                            ))}
-                        </div>
+                    <div className="lg:w-1/2">
+                         <div className="mb-14">
+                              <Title title={<span>Services</span>} />
+                         </div>
+                         <div className="grid  grid-cols-1 md:grid-cols-2 relative">
+                              {productsData.map((product, index) => (
+                                   <div
+                                        className={`card hover:bg-[#797DFC] hover:text-white transition-all w-full rounded-none py-8 relative ${index === 2 ? 'md:col-span-2' : ''}`}
+                                        key={index}
 
+                                   >
+                                        <div className="card-body">
+                                             <h2 className="text-xl font-bold mb-4">{product.title}</h2>
+                                             <p>{product.description}</p>
+                                        </div>
+                                        {index === 0 && (
+                                             <div className="absolute hidden lg:block inset-y-0 right-0 border-custom-right"></div>
+                                        )}
+                                        {index === 2 && (
+                                             <div className="absolute hidden lg:block bottom-0 left-0 border-custom-top"></div>
+                                        )}
+                                   </div>
+                              ))}
+                         </div>
                     </div>
+                    <div
+                         className="lg:w-1/2 mt-28 lg:mt-0"
+                         initial="hidden"
 
-                    <div>
-                        <Image className="w-full mt-28" src={serviceImg} alt="Feature image"></Image>
+                    >
+                         <Image src={serviceImg} alt="" className="w-full" />
                     </div>
-                </div>
-
-
-            </div>
-        </section>
-    )
+               </div>
+          </section>
+     )
 }
-
-
