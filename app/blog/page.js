@@ -39,11 +39,11 @@ function blog() {
                          >
                               {blogData.map((blog, index) => (
                                    <div
-                                        className="border-opacity-20 border-[#797DFC] transition-all duration-300 hover:bg-[#797DFC1A] hover:scale-105  border-2 rounded-2xl w-full"
+                                        className="border-opacity-20 border-[#797DFC] transition-all duration-300 hover:bg-[#797DFC1A] hover:scale-105 relative pb-20 p-10 px-10 space-y-7  border-2 rounded-2xl w-full"
                                         key={index}
 
                                    >
-                                        <div className="p-10 space-y-7">
+
 
                                              <h2 className="text-xl lg:text-2xl font-medium mt-2 text-[#121643]">{blog.title}</h2>
                                              <div className="u-underline__trigger">
@@ -51,11 +51,11 @@ function blog() {
                                              </div>
                                              <button
                                                   href="#"
-                                                  className="font-bold inline-block bg-[#797DFC] hover:bg-[#797DFc] btn-sm rounded-full mt-4 text-sm text-white px-8"
+                                                  className="font-bold absolute bottom-7 inline-block bg-[#797DFC] hover:bg-[#797DFc] btn-sm rounded-full mt-4 text-sm text-white px-8"
                                              >
                                                   Learn More &#8594;
                                              </button>
-                                        </div>
+
                                    </div>
                               ))}
                          </div>
