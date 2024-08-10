@@ -86,7 +86,7 @@ const TryDemoComponent = () => {
      }, [chatHistory]);
 
      return (
-          <div className='max-w-7xl mx-auto'>
+          <div className=''>
                <main className='flex-none gap-4 items-center lg:flex'>
                     <div className="text-left my-8 w-auto lg:w-1/2">
                          <h1 className="text-2xl lg:text-4xl font-bold text-[#121643]">Try AI-Assist Demo</h1>

@@ -17,7 +17,7 @@ const Bottom = ({ text, button }) => {
                     </div>
                     <ButtonAll content={button} /> {/* Use button prop here */}
                </div>
-               <div className='mt-14 lg:mt-0'>
+               <div className='mt-14 lg:mt-0 md:hidden lg:block'>
                     <Image src={img}></Image>
                </div>
           </section>

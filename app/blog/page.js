@@ -23,7 +23,7 @@ function blog() {
 
 
      return (
-          <main className='max-w-7xl mx-auto'>
+          <main className=''>
 
                <Pagetit
                     title="AI-Assist Blog" desc="Stay updated with the latest news, tips, and insights on AI and customer support."></Pagetit>
@@ -34,12 +34,12 @@ function blog() {
                     <h1 className='text-center text-2xl lg:text-3xl mb-[15px] font-bold'>Recent Posts</h1>
                     <div className="mt-20">
                          <div
-                              className="grid grid-cols-1 md:grid-cols-3 gap-8"
+                              className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8"
 
                          >
                               {blogData.map((blog, index) => (
                                    <div
-                                        className="feature-card-two border-opacity-20 border-[#797DFC] transition-all duration-300 hover:bg-[#797DFC1A] hover:scale-110  border-2 rounded-2xl w-full"
+                                        className="border-opacity-20 border-[#797DFC] transition-all duration-300 hover:bg-[#797DFC1A] hover:scale-105  border-2 rounded-2xl w-full"
                                         key={index}
 
                                    >

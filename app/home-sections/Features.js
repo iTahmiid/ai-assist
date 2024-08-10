@@ -52,30 +52,23 @@ export default function Features() {
                <div className="my-20">
                     <h1 className="lg:mb-0 text-3xl lg:text-4xl text-center mb-10 text-[#121643] font-extrabold">Features</h1>
                     <div className="mt-20">
-                         <motion.div
-                              className="grid grid-cols-1 md:grid-cols-3 gap-8"
+                         <div
+                              className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8"
                               initial="hidden"
                               animate={controls}
                               variants={cardVariants}
                               transition={{ staggerChildren: 0.3, delayChildren: 0.5 }} // Adjust delay here
                          >
                               {featureData.map((feature, index) => (
-                                   <motion.div
-                                        className="feature-card-two border-opacity-20 border-[#797DFC] transition-all duration-300 hover:bg-[#797DFC1A] hover:scale-110  border-2 rounded-2xl w-full"
+                                   <div
+                                        className="feature-card-two border-opacity-20 border-[#797DFC] transition-all duration-300 hover:bg-[#797DFC1A] hover:scale-105  border-2 rounded-2xl w-full"
                                         key={index}
-                                        variants={cardVariants}
-                                        style={{
-                                             transitionDelay: `${index * 100}ms` // Individual card delay
-                                        }}
-                                        transition={{
-                                             duration: 0.5, // Duration of each card animation
-                                             delay: index * 0.1 // Adjust delay for each card
-                                        }}
+
                                    >
                                         <div className="p-10 space-y-7">
                                              <div>
                                                   <h1 className="text-3xl mb-2">
-                                                       <span className="bg-white inline-block text-black p-5 rounded-xl">{feature.icon}</span>
+                                                       <span className="bg-[#797DFC] text-white inline-block  p-5 rounded-xl">{feature.icon}</span>
                                                   </h1>
                                              </div>
                                              <h2 className="text-xl lg:text-2xl font-medium mt-2 text-[#121643]">{feature.title}</h2>
@@ -89,9 +82,9 @@ export default function Features() {
                                                   Learn More &#8594;
                                              </button>
                                         </div>
-                                   </motion.div>
+                                   </div>
                               ))}
-                         </motion.div>
+                         </div>
                     </div>
                </div>
           </section>

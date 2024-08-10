@@ -26,7 +26,7 @@ function About() {
      ]
 
      return (
-          <main className='max-w-7xl mx-auto'>
+          <main className=''>
 
                <Pagetit title="About AI-Assist" desc="Learn more about our mission and the team behind AI-Assist."></Pagetit>
 

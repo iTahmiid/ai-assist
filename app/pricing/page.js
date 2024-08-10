@@ -65,13 +65,14 @@ function Pricing() {
     ];
 
     return (
-        <main className="max-w-7xl mx-auto">
+        <main className="">
             <Pagetit
                 title={<span>Flexible Pricing Plans <br /> for Every Need</span>} desc="Learn more about our mission and the team behind AI-Assist."></Pagetit>
-            <div className="grid grid-cols-1 mt-10 md:grid-cols-2 lg:grid-cols-3 gap-8">
+      <div className='justify-center'>
+        <div className="grid grid-cols-1 mt-10 md:grid-cols-2  lg:grid-cols-3 gap-8">
                 {plansData.map((plan, index) => (
-                    <div key={index} className="card border rounded-none bg-base-100">
-                        <div className="px-5 pt-6 py-20">
+                    <div key={index} className="feature-card-two border-opacity-20 border-[#797DFC] transition-all duration-300 hover:bg-[#797DFC1A] hover:scale-105  border-2 rounded-2xl w-full">
+                        <div className="px-9 py-10 ">
                             <h2 className="text-lg text-gray-400 font-bold">{plan.name}</h2>
                             <p className="text-5xl mt-2 font-bold">{plan.price}</p>
                             <ul className=" mt-9 text-sm space-y-4 list-inside">
@@ -98,6 +99,7 @@ function Pricing() {
                     </div>
                 ))}
             </div>
+      </div>
         </main>
     );
 }
