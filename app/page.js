@@ -27,8 +27,8 @@ export default function Home() {
 
      return (
           <main className="">
-               <header className="header p-10 lg:p-[120px]  relative">
-                    <div className="mb-6">
+               <header className="header p-10 lg:p-[120px] flex items-center justify-center  relative">
+                    <div className="mb-6 mt-8 lg:mt-0 text-center lg:text-left">
                          <div
                               className="relative"
 

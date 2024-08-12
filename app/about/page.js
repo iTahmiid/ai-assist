@@ -42,7 +42,7 @@ function About() {
                          </div>
                     </div>
 
-                    <div className='max-w-6xl mx-auto'>
+                    <div className='mx-auto'>
                          <div>
                               <h1 className="text-2xl lg:text-4xl mb-4 font-bold  mt-44  relative">
                                    Our Team

@@ -31,7 +31,7 @@ export default function RootLayout({ children }) {
                <body className={mulish.className}>
 
 
-              <div className='container lg:max-w-7xl'>
+              <div className='px-2 mx-auto lg:max-w-7xl'>
               <Navbar></Navbar>
               </div>
 
@@ -39,7 +39,7 @@ export default function RootLayout({ children }) {
 
 
 
-                    <main className="container lg:max-w-7xl mx-autoab">
+                    <main className="px-2 lg:max-w-7xl mx-auto">
                          {children}
                     </main>
 

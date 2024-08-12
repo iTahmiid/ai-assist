@@ -3,42 +3,41 @@
 @tailwind utilities;
 
 body {
-     overflow-x: hidden;
-     max-width: 100%;
-     width: 100%;
-
+  overflow-x: hidden;
+  max-width: 100%;
+  width: 100%;
 }
 
 html {
-     scrollbar-width: thin;
+  scrollbar-width: thin;
 }
 
 .custom-underline {
-     position: relative;
-     display: inline-block;
+  position: relative;
+  display: inline-block;
 }
 
 .header {
-     background-image: url(../public/images/hero.png);
-     background-size: cover;
-     background-repeat: no-repeat;
-     border-radius: 40px;
+  background-image: url(../public/images/hero.png);
+  background-size: cover;
+  background-repeat: no-repeat;
+  border-radius: 40px;
 }
 
 .custom-underline::after {
-     content: '';
-     position: absolute;
-     width: 100%;
-     height: 5px;
-     background-color: #225BD7;
-     bottom: -1px;
-     left: 0;
-     transition: width 0.3s ease;
-     border-radius: 30px;
+  content: "";
+  position: absolute;
+  width: 100%;
+  height: 5px;
+  background-color: #225bd7;
+  bottom: -1px;
+  left: 0;
+  transition: width 0.3s ease;
+  border-radius: 30px;
 }
 
 .title:hover .custom-underline::after {
-     width: 0;
+  width: 0;
 }
 
 /* chat box  */
@@ -46,213 +45,184 @@ html {
 /* Chatbox Styles */
 /* General chatbox styling */
 .chatbox {
-     display: flex;
-     flex-direction: column;
-     height: 700px;
-     max-width: 600px;
-     margin: auto;
-     border: 1px solid #ddd;
+  display: flex;
+  flex-direction: column;
+  height: 700px; /* Default height */
 
-     overflow: hidden;
+  margin: auto;
+  border: 1px solid #ddd;
 
-     border-radius: 20px;
+  overflow: hidden;
+
+  border-radius: 20px;
 }
+
+/* Media query for small devices */
+
 
 .chatbox-header {
-     border-bottom: 1px solid #ddd;
-     padding: 20px 10px;
-     background: #797DFC;
-     background: linear-gradient(to right,
-               #797DFC, #f2fcfe);
-     color: white;
+  border-bottom: 1px solid #ddd;
+  padding: 20px 10px;
+  background: #797dfc;
+  background: linear-gradient(to right, #797dfc, #f2fcfe);
+  color: white;
 }
-
-
-
-
 
 .chatbox-body {
-     flex: 1;
-     overflow-y: auto;
-     padding: 10px;
-     background-color: #fff;
-     display: flex;
-     flex-direction: column;
-     gap: 10px;
-     scrollbar-width: none;
+  flex: 1;
+  overflow-y: auto;
+  padding: 10px;
+  background-color: #fff;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  scrollbar-width: none;
 }
-
 
 .user-message,
 .bot-message {
-     max-width: 100%;
-     margin-bottom: 10px;
-     padding: 10px 20px;
+  max-width: 100%;
+  margin-bottom: 10px;
+  padding: 10px 20px;
 
-     position: relative;
-     border-radius: 30px;
-
+  position: relative;
+  border-radius: 30px;
 }
 
 .user-message {
-     align-self: flex-end;
-     background: #091E3A;
-     background: linear-gradient(to right,
-               #091E3A, #2F80ED, #2D9EE0);
-     color: white;
-     text-align: right;
-
+  align-self: flex-end;
+  background: #091e3a;
+  background: linear-gradient(to right, #091e3a, #2f80ed, #2d9ee0);
+  color: white;
+  text-align: right;
 }
 
 .bot-message {
-     align-self: flex-start;
-     background-color: #EAEAEA;
-     color: black;
-     text-align: left;
-
+  align-self: flex-start;
+  background-color: #eaeaea;
+  color: black;
+  text-align: left;
 }
 
 .loader {
-     display: flex;
-     justify-content: center;
-     align-items: center;
-}
-
-.loader hr {
-     width: 6px;
-     height: 6px;
-     margin: 3px;
-     border-radius: 50%;
-     background-color: #0078FF;
-     animation: loader 0.6s infinite alternate;
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
 
 @keyframes loader {
-     from {
-          transform: scale(1);
-     }
+  from {
+    transform: scale(1);
+  }
 
-     to {
-          transform: scale(1.5);
-     }
+  to {
+    transform: scale(1.5);
+  }
 }
-
-
-
-
 
 .indicator-item {
-     width: 10px;
-     height: 10px;
-     background-color: #00FF00;
-     border-radius: 50%;
-     position: absolute;
-
+  width: 10px;
+  height: 10px;
+  background-color: #00ff00;
+  border-radius: 50%;
+  position: absolute;
 }
 
 .loader hr {
-     border-radius: 4px;
-     border: none;
-     background: linear-gradient(to right, #121643, #ffffff, #121643);
-     background-size: 800px 50px;
-     height: 20px;
-     width: 400px;
-     animation: loader 3s infinite linear;
-     margin-bottom: 10px;
+  border-radius: 4px;
+  border: none;
+  background: linear-gradient(to right, #121643, #ffffff, #121643);
+  background-size: 800px 50px;
+  height: 20px;
+
+  animation: loader 3s infinite linear;
+  margin-bottom: 10px;
 }
 
 @keyframes loader {
-     0% {
-          background-position:
+  0% {
+    background-position: -800px 0px;
+  }
 
-               -800px 0px;
-     }
-
-     100% {
-          background-position: 800px 0;
-     }
+  100% {
+    background-position: 800px 0;
+  }
 }
 
 .gradiant-bg {
-     background: linear-gradient(-45deg, #121643, #124108, #3d555e, #0d352c);
-     background-size: 400% 400%;
-     animation: gradient 4s ease infinite;
-
+  background: linear-gradient(-45deg, #121643, #124108, #3d555e, #0d352c);
+  background-size: 400% 400%;
+  animation: gradient 4s ease infinite;
 }
 
 .gradient-text {
-     background: linear-gradient(90deg, #797DFC, #9F94FC);
-     -webkit-background-clip: text;
-     -webkit-text-fill-color: transparent;
+  background: linear-gradient(90deg, #797dfc, #9f94fc);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
 }
 
-
 @keyframes gradient {
-     0% {
-          background-position: 0% 50%;
-     }
+  0% {
+    background-position: 0% 50%;
+  }
 
-     50% {
-          background-position: 100% 50%;
-     }
+  50% {
+    background-position: 100% 50%;
+  }
 
-     100% {
-          background-position: 0% 50%;
-     }
+  100% {
+    background-position: 0% 50%;
+  }
 }
 
 .chatbox-body {
-     overflow-y: auto;
+  overflow-y: auto;
 }
 
 .feature-card {
-     position: relative;
-     overflow: hidden;
+  position: relative;
+  overflow: hidden;
 }
 
 .feature-card::before {
-     content: '';
-     position: absolute;
-     top: 0;
-     left: 0;
-     width: 700px;
-     height: 700px;
-     background: radial-gradient(circle, #797DFC, transparent, transparent);
-     opacity: 0;
-     transition: opacity 0.3s ease-in-out;
-     pointer-events: none;
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 700px;
+  height: 700px;
+  background: radial-gradient(circle, #797dfc, transparent, transparent);
+  opacity: 0;
+  transition: opacity 0.3s ease-in-out;
+  pointer-events: none;
 }
 
 .feature-card:hover::before {
-     opacity: 1;
-
+  opacity: 1;
 }
 
-
 .card {
-     position: relative;
+  position: relative;
 }
 
 .card .border-custom-right {
-     border-right: 1px solid #12132D26;
-     /* Adjust color and thickness */
-     height: 100%;
-     width: 2px;
-     position: absolute;
-     top: 0;
-     right: 0;
+  border-right: 1px solid #12132d26;
+  /* Adjust color and thickness */
+  height: 100%;
+  width: 2px;
+  position: absolute;
+  top: 0;
+  right: 0;
 }
 
 .card .border-custom-top {
-     border-top: 1px solid #12132D26;
-     /* Adjust color and thickness */
-     width: 100%;
-     height: 2px;
-     position: absolute;
-     top: 0;
-     left: 0;
+  border-top: 1px solid #12132d26;
+  /* Adjust color and thickness */
+  width: 100%;
+  height: 2px;
+  position: absolute;
+  top: 0;
+  left: 0;
 }
-
-
 
 /* navbar  */
